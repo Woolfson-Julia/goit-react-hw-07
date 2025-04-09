@@ -1,0 +1,11 @@
+.container {
+  width: 300px;
+  margin-bottom: 20px;
+}
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.71;
+  color: #5f5050;
+  margin-bottom: 4px;
+}
