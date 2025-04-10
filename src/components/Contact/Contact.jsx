@@ -6,11 +6,12 @@ import css from "./Contact.module.css";
 
 
 export default function Contact({ data: { id, name, number } }) {
+  
   const dispatch = useDispatch();
   
   const handleDelete = () => {
     dispatch(deleteContact(id));
-}
+  }
 
   return (
     <div className={css.container}>

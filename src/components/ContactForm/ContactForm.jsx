@@ -7,16 +7,14 @@ import css from "./ContactForm.module.css"
 
 export default function ContactForm() {
   
-
-
   const dispatch = useDispatch();
-
   const fieldId = nanoid();
+
   const handleSubmit = (values, actions) => {
-    values.id = nanoid();
     dispatch(addContact(values));
     actions.resetForm();
   };
+
   const UserSchema = Yup.object().shape({
     name: Yup.string()
       .min(3, "Too Short!")
@@ -27,6 +25,7 @@ export default function ContactForm() {
       .max(50, "Too Long!")
       .required("Required"),
   });
+  
   return (
     <Formik
       initialValues={{name: '', number: ''}}
